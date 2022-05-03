@@ -11,7 +11,11 @@ RUN   yum install -y --nodocs --disableplugin=subscription-manager httpd && \
       echo "Hello from benk!" > ${DOCROOT}/index.html
 
 # Allows child images to inject their own content into DocumentRoot
+RUN   ls src/
+RUN   ls /var/www/html
 ONBUILD COPY src/ ${DOCROOT}/
+RUN   ls src/
+RUN   ls /var/www/html
 
 EXPOSE 80
 
