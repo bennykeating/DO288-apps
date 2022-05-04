@@ -5,14 +5,11 @@ MAINTAINER Red Hat Training <training@redhat.com>
 # DocumentRoot for Apache
 ENV DOCROOT=/var/www/html 
 
-
-RUN   yum install -y --nodocs --disableplugin=subscription-manager httpd && \
-      yum clean all --disableplugin=subscription-manager -y && \
-      echo "Hello from benk!" > ${DOCROOT}/index.html
+RUN   yum install -y --nodocs --disableplugin=subscription-manager httpd 
+RUN   yum clean all --disableplugin=subscription-manager -y
+RUN   echo "Hello from benk!" > ${DOCROOT}/index.html
 
 # Allows child images to inject their own content into DocumentRoot
-RUN   pwd
-ONBUILD COPY src/ ${DOCROOT}/
 
 
 EXPOSE 80
