@@ -1,20 +1,13 @@
 <?php
 
-    print "hello from benk\n";
-    print "hello from benk\n";
-
-
+    print "hello from benk.php\n";
+   
     $lori = $_ENV["DATABASE_PASSWORD"];
+    echo "Password is " . $lori . "<br>\n";
 
-$txt1 = "Learn PHP";
-$txt2 = "W3Schools.com";
-$x = 5;
-$y = 4;
+    $msg = $_ENV["HELLO_MESSAGE"];
+    $aud = $_ENV["HELLO_AUDIENCE"];
 
-echo "<h2>" . $txt1 . "</h2>";
-echo "Study PHP at " . $txt2 . "<br>";
-
-
-echo "Password is " . $lori . "<br>";
+    echo "\n" . $msg . " " . $aud . "!\n\n";
 
 ?>
