@@ -7,5 +7,5 @@
     $lori = $_ENV["DATABASE_PASSWORD"];
 
 
-    print The password is $lori ! "\n";
+    //print The password is $lori ! "\n";
 ?>
