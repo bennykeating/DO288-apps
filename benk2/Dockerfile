@@ -5,7 +5,7 @@ MAINTAINER Red Hat Training <training@redhat.com>
 # DocumentRoot for Apache
 ENV DOCROOT=/var/www/html 
 
-RUN   yum install -y --nodocs --disableplugin=subscription-manager httpd 
+RUN   yum install -y --nodocs --disableplugin=subscription-manager httpd python3
 RUN   yum clean all --disableplugin=subscription-manager -y
 RUN   echo "Hello from benk!" > ${DOCROOT}/index.html
 
