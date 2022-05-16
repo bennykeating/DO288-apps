@@ -10,7 +10,7 @@ RUN   yum clean all --disableplugin=subscription-manager -y
 RUN   echo "Hello from benk!" > ${DOCROOT}/index.html
 
 # Allows child images to inject their own content into DocumentRoot
-
+RUN echo "print('Hello Benny <3!')" > lori.py
 
 EXPOSE 80
 
